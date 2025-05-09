@@ -1,10 +1,10 @@
-/* Main Styles for iLearn Website - Classic Theme */
+/* Main Styles for iLearn Website - Modern Theme */
 
 /* General styles */
 body {
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #f5f1e4;
-    color: #333;
+    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -16,15 +16,15 @@ main {
 
 /* Header styles */
 header {
-    background-color: #8b4513 !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-bottom: 3px solid #6b3100;
+    background: linear-gradient(135deg, #4a6bff 0%, #2541b8 100%) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-bottom: none;
 }
 
 header h1 {
-    font-family: 'Georgia', Times, serif;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .logo-container {
@@ -36,9 +36,15 @@ header h1 {
     max-height: 60px;
     margin-right: 15px;
     padding: 5px;
-    background-color: #fff;
-    border: 1px solid #d9bb84;
-    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.logo-container img:hover {
+    transform: scale(1.05);
 }
 
 /* Search box styling */
@@ -48,58 +54,72 @@ header h1 {
 }
 
 #search-input {
-    border: 2px solid #8b4513;
-    background-color: #fffbef;
-    font-family: 'Times New Roman', Times, serif;
-    color: #333;
-    padding: 8px 12px;
+    border: 1px solid #e0e4e8;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    color: #212529;
+    padding: 12px 16px;
+    border-radius: 8px 0 0 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
 #search-input:focus {
-    box-shadow: none;
-    border-color: #d9bb84;
+    box-shadow: 0 0 0 3px rgba(74, 107, 255, 0.25);
+    border-color: #4a6bff;
     background-color: #fff;
 }
 
 #search-button {
-    background-color: #8b4513;
-    border-color: #6b3100;
+    background: linear-gradient(135deg, #4a6bff 0%, #2541b8 100%);
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 8px 8px 0;
+    transition: all 0.3s ease;
 }
 
 #search-button:hover {
-    background-color: #6b3100;
+    background: linear-gradient(135deg, #3a5bef 0%, #1531a8 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(74, 107, 255, 0.2);
 }
 
 /* File list styling */
 .card {
-    background-color: #fffbef;
-    border: 2px solid #d9bb84;
-    border-radius: 0;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .card-header {
-    background-color: #d9bb84;
-    color: #4e2500;
-    font-family: 'Georgia', Times, serif;
-    font-weight: bold;
-    border-bottom: 2px solid #b28e53;
-    padding: 0.75rem 1rem;
+    background-color: #fff;
+    color: #212529;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-weight: 600;
+    border-bottom: 1px solid #e0e4e8;
+    padding: 1rem 1.25rem;
 }
 
 .list-group-item {
-    background-color: #fffbef;
-    border-bottom: 1px solid #d9bb84;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f2f5;
     border-left: none;
     border-right: none;
-    padding: 12px 15px;
-    transition: background-color 0.2s ease;
+    padding: 16px 20px;
+    transition: all 0.2s ease;
 }
 
 .list-group-item:hover {
-    background-color: #f8e8cc;
-    transform: none;
-    border-left: none;
+    background-color: #f8f9fa;
+    transform: translateX(4px);
 }
 
 .list-group-item:last-child {
@@ -107,31 +127,31 @@ header h1 {
 }
 
 .file-icon {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-right: 15px;
     width: 25px;
     text-align: center;
-    color: #8b4513;
+    color: #4a6bff;
 }
 
 .fa-file-pdf {
-    color: #972800;
+    color: #ff4a4a;
 }
 
 .fa-file-word {
-    color: #00458f;
+    color: #4a7fff;
 }
 
 .fa-file-excel {
-    color: #16662e;
+    color: #4aff7f;
 }
 
 .fa-file-powerpoint {
-    color: #b74600;
+    color: #ff7f4a;
 }
 
 .fa-folder {
-    color: #daa520;
+    color: #ffcc33;
 }
 
 .file-info {
@@ -141,26 +161,28 @@ header h1 {
 
 .file-name {
     font-weight: 500;
-    color: #000;
-    margin-bottom: 2px;
-    font-family: 'Georgia', Times, serif;
+    color: #212529;
+    margin-bottom: 4px;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
 .file-meta {
     font-size: 0.8rem;
-    color: #6b3100;
-    font-style: italic;
+    color: #6c757d;
+    font-style: normal;
 }
 
 .file-type-badge {
-    padding: 0.2rem 0.6rem;
+    padding: 0.3rem 0.8rem;
     font-size: 0.75rem;
-    font-weight: normal;
-    border-radius: 0;
-    background-color: #d9bb84 !important;
-    color: #4e2500;
+    font-weight: 500;
+    border-radius: 6px;
+    background-color: #e9ecef !important;
+    color: #495057;
     margin-left: 10px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 /* Loading animation */
@@ -169,34 +191,36 @@ header h1 {
 }
 
 .spinner-border {
-    color: #8b4513 !important;
-}
-
-/* Card hover effect - disabled */
-.card:hover {
-    transform: none;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    color: #4a6bff !important;
 }
 
 /* Footer */
 footer {
-    background-color: #d9bb84 !important;
-    border-top: 2px solid #b28e53;
-    color: #4e2500;
-    padding: 10px 0;
+    background-color: #fff !important;
+    border-top: 1px solid #e0e4e8;
+    color: #6c757d;
+    padding: 16px 0;
 }
 
 footer p {
-    color: #4e2500 !important;
-    font-family: 'Georgia', Times, serif;
+    color: #6c757d !important;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-size: 0.9rem;
 }
 
 /* Alert styling */
 .alert-info, .alert-warning {
-    background-color: #fffbef;
-    border: 2px solid #d9bb84;
-    color: #4e2500;
-    font-family: 'Georgia', Times, serif;
+    background-color: #fff;
+    border: none;
+    border-left: 4px solid #4a6bff;
+    color: #212529;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.alert-warning {
+    border-left-color: #ffcc33;
 }
 
 /* Responsive styles */
@@ -242,14 +266,22 @@ footer p {
 
 /* Custom download link */
 .download-link {
-    color: #8b4513;
-    padding: 3px 8px;
-    border: 1px solid #d9bb84;
-    border-radius: 0;
-    background-color: #fffbef;
+    color: #4a6bff;
+    padding: 8px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(74, 107, 255, 0.1);
+    transition: all 0.3s ease;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
 }
 
 .download-link:hover {
-    background-color: #f8e8cc;
-    color: #6b3100;
+    background-color: rgba(74, 107, 255, 0.2);
+    color: #2541b8;
+    transform: translateY(-2px);
 }
